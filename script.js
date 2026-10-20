@@ -5,8 +5,10 @@
    ============================================================ */
 
 // --- Gemini API Configuration ---
+const configuredApiKey = window.LOGGEDOFF_CONFIG?.apiKey;
+
 const GEMINI_CONFIG = {
-  apiKey: 'REMOVED',
+  apiKey: configuredApiKey,
   primaryModel: 'gemini-3.5-flash-lite',
   fallbackModel: 'gemini-3.5-flash',
   endpoint: 'https://generativelanguage.googleapis.com/v1beta/models/'
@@ -359,6 +361,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- API Call to Gemini ---
   async function callGemini(contents) {
+    if (!GEMINI_CONFIG.apiKey) {
+      throw new Error('Gemini API key is not configured. Create config.js from config.example.js.');
+    }
+
     const url = `${GEMINI_CONFIG.endpoint}${GEMINI_CONFIG.primaryModel}:generateContent?key=${GEMINI_CONFIG.apiKey}`;
     const payload = {
       system_instruction: {
