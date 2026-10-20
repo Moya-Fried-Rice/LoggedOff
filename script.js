@@ -361,11 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- API Call to Gemini ---
   async function callGemini(contents) {
-    if (!GEMINI_CONFIG.apiKey) {
-      throw new Error('Gemini API key is not configured. Create config.js from config.example.js.');
-    }
-
-    const url = `${GEMINI_CONFIG.endpoint}${GEMINI_CONFIG.primaryModel}:generateContent?key=${GEMINI_CONFIG.apiKey}`;
     const payload = {
       system_instruction: {
         parts: [{ text: SYSTEM_INSTRUCTION }]
@@ -376,6 +371,26 @@ document.addEventListener('DOMContentLoaded', () => {
         maxOutputTokens: 1000
       }
     };
+
+    // Local development may use config.js; deployed builds use the Vercel
+    // function so the API key stays in server-side environment variables.
+    if (!GEMINI_CONFIG.apiKey) {
+      const response = await fetch('/api/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || `API request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data.text;
+    }
+
+    const url = `${GEMINI_CONFIG.endpoint}${GEMINI_CONFIG.primaryModel}:generateContent?key=${GEMINI_CONFIG.apiKey}`;
 
     try {
       const response = await fetch(url, {
