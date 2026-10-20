@@ -245,11 +245,11 @@
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4>Contact Us</h4>
           <ul class="footer__links">
-            <li>[Placeholder: Email]</li>
-            <li>[Placeholder: Phone]</li>
-            <li>[Placeholder: Address]</li>
+            <li><a href="mailto:loggedoff.cav@gmail.com">loggedoff.cav@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/loggedoff.cav" target="_blank" rel="noopener noreferrer">fb.com/loggedoff.cav</a></li>
+            <li>LPU-Cavite, General Trias</li>
           </ul>
         </div>
       </div>
@@ -260,12 +260,12 @@
     </div>
   </footer>
 
-  <!-- Chatbot Bubble UI (Future Feature Placeholder) -->
+  <!-- LoggedOff Support Chatbot -->
   <div class="chatbot">
-    <button class="chatbot__toggle" aria-label="Open support chat">
+    <button class="chatbot__toggle" aria-label="Open support chat" title="Open LoggedOff Support">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     </button>
-    <div class="chatbot__window">
+    <div class="chatbot__window" role="dialog" aria-label="LoggedOff Support Chat">
       <div class="chatbot__header">
         <div class="chatbot__header-info">
           <div class="chatbot__avatar">
@@ -273,24 +273,38 @@
           </div>
           <div class="chatbot__header-text">
             <h4>LoggedOff Support</h4>
-            <span>Digital Safety Assistant</span>
+            <span><span class="chatbot__status-dot"></span>Online • Your Safe Space</span>
           </div>
         </div>
-        <button class="chatbot__close" aria-label="Close chat">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+        <div class="chatbot__header-actions">
+          <button type="button" class="chatbot__btn-icon chatbot__clear" aria-label="Clear chat" title="Clear conversation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </button>
+          <button type="button" class="chatbot__btn-icon chatbot__close" aria-label="Close chat" title="Close chat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="chatbot__crisis-banner">
+        <span>Need urgent help? Call <strong>NCMH 1553</strong> (Toll-Free)</span>
+        <a href="tel:1553">Call Now</a>
       </div>
       <div class="chatbot__body">
-        <div class="chatbot__message chatbot__message--bot">Welcome to LoggedOff Support. This assistant is currently under development and will be available soon to help with cyberbullying concerns and digital safety questions.</div>
-        <div class="chatbot__message chatbot__message--bot">In the meantime, please visit our Services page or Contact page to connect with professional support.</div>
-        <div class="chatbot__message chatbot__message--notice">This feature is coming soon.</div>
+        <!-- Messages rendered dynamically by script.js -->
       </div>
-      <div class="chatbot__footer">
-        <input type="text" class="chatbot__input" placeholder="This feature is coming soon..." disabled>
-        <button class="chatbot__send" disabled aria-label="Send message">
+      <div class="chatbot__quick-replies">
+        <button type="button" class="chatbot__quick-btn" data-query="I need urgent crisis hotlines in the Philippines">🆘 Crisis Hotlines</button>
+        <button type="button" class="chatbot__quick-btn" data-query="How do I book an appointment with the LPU-C Guidance and Testing Center?">📅 Book LPU-C GTC</button>
+        <button type="button" class="chatbot__quick-btn" data-query="What services does Exalt Psychological Clinic offer and how can I contact them?">🩺 Exalt Clinic</button>
+        <button type="button" class="chatbot__quick-btn" data-query="How does the LoggedOff NFC Keychain work?">🔑 NFC Keychain</button>
+        <button type="button" class="chatbot__quick-btn" data-query="What are the mental health statistics in the Philippines?">📊 Mental Health Stats</button>
+      </div>
+      <form class="chatbot__footer">
+        <input type="text" class="chatbot__input" placeholder="Type a message or question..." aria-label="Chat message input" autocomplete="off" maxlength="1000">
+        <button type="submit" class="chatbot__send" aria-label="Send message" title="Send message">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
-      </div>
+      </form>
     </div>
   </div>
 
