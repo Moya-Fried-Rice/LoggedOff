@@ -313,6 +313,18 @@ p:last-child {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--1 {
+  grid-template-columns: 1fr;
+}
+
+.information-cards {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --- Buttons --- */
 .btn {
   display: inline-flex;
@@ -662,7 +674,7 @@ p:last-child {
 .page-header {
   padding-top: calc(var(--nav-height) + 64px);
   padding-bottom: 64px;
-  background: linear-gradient(160deg, #78C3EA 0%, #A0D9EA 100%);
+  background: linear-gradient(160deg, var(--color-bg) 0%, #A1D3E6 50%, var(--color-chamomile-pale) 100%);
   text-align: center;
 }
 
@@ -754,6 +766,7 @@ p:last-child {
   text-align: center;
   padding: 44px 32px;
   background: linear-gradient(135deg, #F4F4F3 0%, #C9D49B 100%);
+  position: relative;
 }
 
 .card--feature .card__icon {
@@ -765,6 +778,48 @@ p:last-child {
   align-self: center;
   margin-top: auto;
   border-radius: var(--border-radius-sm);
+}
+
+.card__flower {
+  position: absolute;
+  top: 40%;
+  left: -100px;
+  transform: translateY(-50%);
+  width: 240px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card__flower--right {
+  left: auto;
+  right: -100px;
+}
+
+.card__flower-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card__content {
+  margin-left: 130px;
+  text-align: left;
+}
+
+.card__content--right {
+  margin-left: 0;
+  margin-right: 130px;
+  text-align: right;
+}
+
+.information-cards h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--color-text);
+  font-family: var(--font-heading);
 }
 
 /* Partner card variant */
@@ -852,7 +907,7 @@ p:last-child {
 .service-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 16px;
   align-items: start;
   padding: 48px 0;
 }
