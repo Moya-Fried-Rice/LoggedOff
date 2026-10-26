@@ -714,6 +714,70 @@ p:last-child {
   color: #0D4C5B;
 }
 
+/* Page Header Decorations */
+.page-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header__decoration {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  width: 520px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-header__decoration--left {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  width: 520px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-header__decoration--small {
+  position: absolute;
+  right: 160px;
+  top: 80%;
+  transform: translateY(-50%) rotate(-30deg);
+  opacity: 0.6;
+  width: 280px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .page-header__decoration,
+  .page-header__decoration--left {
+    width: 400px;
+  }
+  .page-header__decoration {
+    right: -60px;
+  }
+  .page-header__decoration--left {
+    left: -60px;
+  }
+  .page-header__decoration--small {
+    width: 220px;
+    right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header__decoration,
+  .page-header__decoration--left,
+  .page-header__decoration--small {
+    display: none;
+  }
+}
+
 /* --- Cards --- */
 .card {
   background-color: var(--color-bg-card);
