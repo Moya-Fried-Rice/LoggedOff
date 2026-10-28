@@ -577,4 +577,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize chat history on load
   loadHistory();
+
+  // --- Contact Card Accordion ---
+  const contactCards = document.querySelectorAll('.contact-card');
+  contactCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      // Don't toggle if clicking a link inside the card
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+      this.classList.toggle('active');
+    });
+  });
 });
