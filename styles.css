@@ -631,6 +631,16 @@ p:last-child {
     z-index: 1;
   }
 
+  .hero__nfc {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 360px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .hero__flower {
     position: absolute;
     pointer-events: none;
@@ -2126,6 +2136,13 @@ p:last-child {
     display: block;
     right: -150px;
     opacity: 0.25;
+  }
+
+  .hero__nfc {
+    width: 220px;
+    right: 0px;
+    top: 60%;
+    opacity: 0.85;
   }
 
   .hero__icon {
