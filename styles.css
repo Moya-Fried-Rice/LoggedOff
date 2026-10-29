@@ -319,8 +319,8 @@ p:last-child {
 }
 
 .information-cards {
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -1675,14 +1675,16 @@ p:last-child {
 }
 
 .chatbot__avatar {
-  width: 34px;
-  height: 34px;
-  background-color: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding: 6px;
+  overflow: hidden;
 }
 
 .chatbot__avatar svg {

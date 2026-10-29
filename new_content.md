@@ -52,22 +52,23 @@ Small Step, Meaningful Changes
 Taking care of your mental well-being doesn’t have to be complicated. Explore these six tips and start with what feels manageable for you.
 
 6 Ways to Care for Your Mental Well-Being
+
 01 — Talk it out with someone you trust
-
 Try to share and connect with your family, friends, or a colleague.
+
 02 — Be kind to yourself
-
 Move your body every day, eat well, and get enough sleep.
+
 03 — Do what makes you happy
-
 Make time for enjoyable activities such as painting, cooking, exercise, and reading.
+
 04 — Be gentle with how you cope
-
 Don’t turn to harmful drugs, alcohol, unhealthy substances and hurt yourself.
-05 — Take two minutes to notice the world around you
 
+05 — Take two minutes to notice the world around you
 Pause and bring your attention to your surroundings with this grounding exercise.
-Take a pause, breathe, and free yourself from the moment.
+
+06 - Take a pause, breathe, and free yourself from the moment.
 
 Try this grounding exercise:
 What are five things I can see?
@@ -79,8 +80,8 @@ What does it feel like to touch my knees, or something else within reach? How do
 You don’t have to navigate difficult moments alone. Support is available when you need it.
 
 Remember, you are not alone, it's okay to seek help.
-[Find Support] (insert button)
 Explore mental health services available to the LPU-Cavite community.
+[Find Support] (insert button)
 
 – Find support page –
 Find Support [Title]
