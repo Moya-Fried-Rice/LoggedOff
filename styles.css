@@ -670,6 +670,23 @@ p:last-child {
     transform: rotate(20deg) scaleX(-1);
   }
 
+  .hero__flower--left.hero__flower--jasmine {
+    right: auto;
+    left: -40px;
+  }
+
+  .hero__flower--left.hero__flower--chamomile {
+    right: auto;
+    left: 400px;
+  }
+
+  .hero__flower--left.hero__flower--lavender {
+    right: auto;
+    left: 250px;
+    top: 10%;
+    transform: rotate(0deg) scaleX(1);
+  }
+
   .hero__icon {
     position: absolute;
     pointer-events: none;
@@ -1366,7 +1383,11 @@ p:last-child {
   color: var(--color-text-secondary);
 }
 
-/* --- Contact Page --- */
+/* --- Info cards (non-clickable, light blue) --- */
+.contact-card.card--info {
+  background: linear-gradient(0deg, #D4E7F2 0%, #EEF5F9 100%);
+  cursor: default;
+}
 .contact-hero {
   padding-top: calc(var(--nav-height) + 80px);
   padding-bottom: 64px;
@@ -1432,12 +1453,13 @@ p:last-child {
 /* Accordion behavior for contact.html only */
 .contact-accordion .contact-card {
   position: relative;
-  background: linear-gradient(135deg, #79C4EA 0%, #F4F4F3 100%);
+  background: linear-gradient(0deg, #D4E7F2 0%, #EEF5F9 100%);
   color: #1a365d;
 }
 
 .contact-accordion .contact-card h3 {
   color: #0f2c4c;
+  padding-right: 40px;
 }
 
 .contact-accordion .contact-card__subtitle {
@@ -2201,6 +2223,22 @@ p:last-child {
     width: 220px;
     right: -30px;
     top: 20%;
+  }
+
+  .hero__flower--left.hero__flower--jasmine {
+    right: auto;
+    left: -70px;
+  }
+
+  .hero__flower--left.hero__flower--chamomile {
+    right: auto;
+    left: 50px;
+  }
+
+  .hero__flower--left.hero__flower--lavender {
+    right: auto;
+    top: 30%;
+    left: -30px;
   }
 
   .page-header {
